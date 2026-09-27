@@ -1,0 +1,6 @@
+{
+  "name": "Local-First Restaurant Management & Operations Platform",
+  "description": "Comprehensive local-first restaurant operations platform with POS, KDS, QR ordering, inventory, recipes, split bills, loyalty, and CRM.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

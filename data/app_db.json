@@ -1,0 +1,541 @@
+{
+  "settings": {
+    "restaurant_name": "پیتزا هات و آریا گریل",
+    "currency": "$",
+    "loyalty_points_unit": "امتیاز",
+    "superuser_username": "admin",
+    "superuser_password": "admin",
+    "wifi_ssid": "PizzaHut_Guest_WiFi",
+    "wifi_password": "pizzahut_guest"
+  },
+  "tables": [
+    {
+      "id": 1,
+      "table_number": "01",
+      "name_label": "میز ۱ (سالن VIP)",
+      "section_name": "سالن VIP",
+      "section": "VIP",
+      "capacity": 4,
+      "status": "OCCUPIED",
+      "current_bill_total": 50,
+      "assigned_waiter_id": 3,
+      "assigned_waiter_name": "فرهاد انوری",
+      "session_started_at": "02:51 PM",
+      "guest_count": 1
+    },
+    {
+      "id": 2,
+      "table_number": "02",
+      "name_label": "میز ۲ (سالن اصلی)",
+      "section_name": "سالن اصلی",
+      "section": "MAIN",
+      "capacity": 2,
+      "status": "OCCUPIED",
+      "current_bill_total": 120,
+      "session_started_at": "۱۰ دقیقه پیش",
+      "assigned_waiter_id": 3,
+      "assigned_waiter_name": "فرهاد انوری"
+    },
+    {
+      "id": 3,
+      "table_number": "03",
+      "name_label": "میز ۳ (تراس روباز)",
+      "section_name": "تراس",
+      "section": "TERRACE",
+      "capacity": 6,
+      "status": "OCCUPIED",
+      "current_bill_total": 70,
+      "session_started_at": "۲۵ دقیقه پیش",
+      "assigned_waiter_id": 3,
+      "assigned_waiter_name": "فرهاد انوری"
+    },
+    {
+      "id": 4,
+      "table_number": "04",
+      "name_label": "میز ۴ (سالن اصلی)",
+      "section_name": "سالن اصلی",
+      "section": "MAIN",
+      "capacity": 4,
+      "status": "AVAILABLE",
+      "current_bill_total": 0,
+      "assigned_waiter_id": 3,
+      "assigned_waiter_name": "فرهاد انوری"
+    },
+    {
+      "id": 5,
+      "table_number": "05",
+      "name_label": "میز ۵ (بخش خانوادگی)",
+      "section_name": "خانوادگی",
+      "section": "FAMILY",
+      "capacity": 8,
+      "status": "RESERVED",
+      "current_bill_total": 0
+    },
+    {
+      "id": 6,
+      "table_number": "06",
+      "name_label": "میز ۶ (فضای باز)",
+      "section_name": "فضای باز",
+      "section": "TERRACE",
+      "capacity": 2,
+      "status": "CLEANING",
+      "current_bill_total": 0
+    }
+  ],
+  "menuItems": [
+    {
+      "id": 1,
+      "name": "Neapolitan Pizza.",
+      "name_en": "Neapolitan Pizza.",
+      "name_ps": "نیپولیټن پیزا",
+      "description": "پیتزای اصیل ایتالیایی با خمیر نازک ناپولیتن، پنیر موزارلا تازه بوفالو، ریحان خوش‌عطر و سس گوجه فرنگی سنتی",
+      "price": 50,
+      "category_id": 1,
+      "category_name": "Pizza",
+      "image": "/src/assets/images/neapolitan_pizza_1790494621915.jpg",
+      "is_available": true,
+      "station": "پیتزا و فست‌فود",
+      "rating": 4.5,
+      "rating_count": 25,
+      "loyalty_points_reward": 15
+    },
+    {
+      "id": 2,
+      "name": "California Pizza.",
+      "name_en": "California Pizza.",
+      "name_ps": "کالیفورنیا پیزا",
+      "description": "پیتزای مدرن کالیفرنیایی با سینه مرغ گریل شده، فلفل دلمه‌ای رنگی، سبزیجات تازه معطر و پنیر گودا",
+      "price": 80,
+      "category_id": 1,
+      "category_name": "Pizza",
+      "image": "/src/assets/images/california_pizza_1790494635802.jpg",
+      "is_available": true,
+      "station": "پیتزا و فست‌فود",
+      "rating": 4.3,
+      "rating_count": 20,
+      "loyalty_points_reward": 20
+    },
+    {
+      "id": 3,
+      "name": "Sicilian Pizza.",
+      "name_en": "Sicilian Pizza.",
+      "name_ps": "سیسیلی پیزا",
+      "description": "پیتزای ضخیم و کرانچی سبک سیسیل با کناره‌های ترد طلایی، سس مارینارا دست‌ساز و پنیر پارمزان و موزارلا کشسانی",
+      "price": 70,
+      "category_id": 1,
+      "category_name": "Pizza",
+      "image": "/src/assets/images/sicilian_pizza_1790494650212.jpg",
+      "is_available": true,
+      "station": "پیتزا و فست‌فود",
+      "rating": 4.2,
+      "rating_count": 23,
+      "loyalty_points_reward": 18
+    },
+    {
+      "id": 4,
+      "name": "Starbuck salad",
+      "name_en": "Starbuck salad",
+      "name_ps": "سټاربک سلاد",
+      "description": "سالاد گاردن تازه و رژیمی با کاهو پیچ فرانسوی، فیله مرغ تنوری، گوجه گیلاسی، زیتون سیاه و سس مخصوص",
+      "price": 20,
+      "category_id": 2,
+      "category_name": "Salad",
+      "image": "/src/assets/images/dish_dessert_cake_1790490513891.jpg",
+      "is_available": true,
+      "station": "سالاد و پیش‌غذا",
+      "rating": 4.6,
+      "rating_count": 18,
+      "loyalty_points_reward": 8
+    },
+    {
+      "id": 5,
+      "name": "برگر زغالی رویال",
+      "name_en": "Royal Charcoal Burger",
+      "name_ps": "رویال سکاره برګر",
+      "description": "گوشت تازه گوساله، پنیر گودا، سس مخصوص و نان بریوش",
+      "price": 45,
+      "category_id": 3,
+      "category_name": "Burger",
+      "image": "/src/assets/images/dish_special_burger_1790490488737.jpg",
+      "is_available": true,
+      "station": "پیتزا و فست‌فود",
+      "rating": 4.8,
+      "rating_count": 86,
+      "loyalty_points_reward": 12
+    },
+    {
+      "id": 6,
+      "name": "موهیتو نعناع و لیمو",
+      "name_en": "Fresh Mojito",
+      "name_ps": "تازه موهیتو",
+      "description": "ترکیب خنک نعناع تازه، لیمو ترش و یخ فراوان",
+      "price": 15,
+      "category_id": 4,
+      "category_name": "Drinks",
+      "image": "/src/assets/images/dish_luxury_drink_1790490501557.jpg",
+      "is_available": true,
+      "station": "کافه و بار",
+      "rating": 4.7,
+      "rating_count": 52,
+      "loyalty_points_reward": 5
+    },
+    {
+      "id": 7,
+      "name": "کیک شکلاتی لاوا",
+      "name_en": "Chocolate Lava Cake",
+      "name_ps": "شکلاتی لاوا کیک",
+      "description": "کیک گرم با مغز شکلات روان و یک اسکوپ بستنی وانیلی",
+      "price": 25,
+      "category_id": 5,
+      "category_name": "Desserts",
+      "image": "/src/assets/images/dish_dessert_cake_1790490513891.jpg",
+      "is_available": true,
+      "station": "کافه و بار",
+      "rating": 4.9,
+      "rating_count": 41,
+      "loyalty_points_reward": 8
+    }
+  ],
+  "staff": [
+    {
+      "id": 1,
+      "name": "مصطفی مددی",
+      "role": "MANAGER",
+      "employee_code": "admin",
+      "phone": "09120000000",
+      "attendance_status": "PRESENT",
+      "password": "admin",
+      "shift": "MORNING",
+      "work_hours": "۰۸:۰۰ الی ۱۶:۰۰"
+    },
+    {
+      "id": 2,
+      "name": "الهام حسینی",
+      "role": "CASHIER",
+      "employee_code": "cashier1",
+      "phone": "09121111111",
+      "attendance_status": "PRESENT",
+      "password": "123",
+      "shift": "MORNING",
+      "work_hours": "۰۸:۰۰ الی ۱۶:۰۰"
+    },
+    {
+      "id": 3,
+      "name": "فرهاد انوری",
+      "role": "WAITER",
+      "employee_code": "waiter1",
+      "phone": "09122222222",
+      "attendance_status": "PRESENT",
+      "password": "123",
+      "shift": "MORNING",
+      "work_hours": "۰۸:۰۰ الی ۱۶:۰۰"
+    },
+    {
+      "id": 4,
+      "name": "استاد نادر کریمی",
+      "role": "KITCHEN",
+      "employee_code": "chef1",
+      "phone": "09123333333",
+      "attendance_status": "PRESENT",
+      "password": "123",
+      "shift": "MORNING",
+      "work_hours": "۰۸:۰۰ الی ۱۶:۰۰"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Jamsed Jhon",
+      "phone": "01845723022573",
+      "tier": "GOLD",
+      "loyalty_points": 420,
+      "total_spend": 1840,
+      "orders_count": 14,
+      "address": "Karang Teagha Hils",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face"
+    },
+    {
+      "id": 2,
+      "name": "Mojamil Haqe",
+      "phone": "01976892045091",
+      "tier": "SILVER",
+      "loyalty_points": 210,
+      "total_spend": 960,
+      "orders_count": 7,
+      "address": "Mohonpur tajmohol",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+    },
+    {
+      "id": 3,
+      "name": "Mahfuza Joha",
+      "phone": "017234819012",
+      "tier": "GOLD",
+      "loyalty_points": 650,
+      "total_spend": 2400,
+      "orders_count": 22,
+      "address": "Karang Teagha Hils",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face"
+    },
+    {
+      "id": 4,
+      "name": "Junaki Islam",
+      "phone": "018991204851",
+      "tier": "SILVER",
+      "loyalty_points": 190,
+      "total_spend": 780,
+      "orders_count": 5,
+      "address": "Karang Teagha Hils",
+      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face"
+    }
+  ],
+  "tierBenefits": [
+    {
+      "tier": "BRONZE",
+      "title": "برنزی",
+      "discount_percent": 0,
+      "free_perk": "بدون مزایا",
+      "min_spend": 0,
+      "required_points": 0,
+      "badge_color": "bg-amber-100 text-amber-900 border-amber-300"
+    },
+    {
+      "tier": "SILVER",
+      "title": "نقره‌ای",
+      "discount_percent": 5,
+      "free_perk": "۵٪ تخفیف",
+      "min_spend": 500,
+      "required_points": 200,
+      "badge_color": "bg-slate-200 text-slate-800 border-slate-400"
+    },
+    {
+      "tier": "GOLD",
+      "title": "طلایی",
+      "discount_percent": 10,
+      "free_perk": "۱۰٪ تخفیف",
+      "min_spend": 1500,
+      "required_points": 500,
+      "badge_color": "bg-yellow-100 text-yellow-900 border-yellow-400"
+    },
+    {
+      "tier": "PLATINUM",
+      "title": "پلاتینیوم",
+      "discount_percent": 15,
+      "free_perk": "۱۵٪ تخفیف",
+      "min_spend": 5000,
+      "required_points": 1200,
+      "badge_color": "bg-purple-100 text-purple-900 border-purple-400"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-3307",
+      "order_number": "3307",
+      "table_id": 1,
+      "table_number": "01",
+      "source": "CUSTOMER_QR",
+      "status": "CONFIRMED",
+      "created_at": "02:51 PM",
+      "items": [
+        {
+          "id": "item-1790504483307-0",
+          "menu_item_id": 1,
+          "name": "Neapolitan Pizza.",
+          "quantity": 1,
+          "unit_price": 50,
+          "subtotal": 50,
+          "seat_number": 1,
+          "course": "COURSE_2",
+          "kitchen_status": "NEW"
+        }
+      ],
+      "waiter_name": "فرهاد انوری"
+    },
+    {
+      "id": "ORD-101",
+      "order_number": "01845723022573",
+      "table_id": 1,
+      "table_number": "01",
+      "source": "CUSTOMER_QR",
+      "status": "COMPLETED",
+      "created_at": "۱۴:۲۰",
+      "customer_name": "Jamsed Jhon",
+      "customer_avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face",
+      "address": "Karang Teagha Hils",
+      "items": [
+        {
+          "id": "oi-1",
+          "menu_item_id": 1,
+          "name": "Neapolitan Pizza.",
+          "seat_number": 1,
+          "quantity": 1,
+          "unit_price": 50,
+          "subtotal": 50,
+          "course": "COURSE_1",
+          "kitchen_status": "SERVED",
+          "station": "پیتزا و فست‌فود"
+        },
+        {
+          "id": "oi-2",
+          "menu_item_id": 4,
+          "name": "Salad Meat",
+          "seat_number": 1,
+          "quantity": 1,
+          "unit_price": 70,
+          "subtotal": 70,
+          "course": "COURSE_1",
+          "kitchen_status": "SERVED",
+          "station": "سالاد و پیش‌غذا"
+        }
+      ]
+    },
+    {
+      "id": "ORD-102",
+      "order_number": "01976892045091",
+      "table_id": 2,
+      "table_number": "02",
+      "source": "WAITER",
+      "status": "CONFIRMED",
+      "created_at": "۱۴:۳۵",
+      "customer_name": "Mojamil Haqe",
+      "customer_avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+      "address": "Mohonpur tajmohol",
+      "items": [
+        {
+          "id": "oi-3",
+          "menu_item_id": 2,
+          "name": "California Pizza.",
+          "seat_number": 1,
+          "quantity": 1,
+          "unit_price": 80,
+          "subtotal": 80,
+          "course": "COURSE_1",
+          "kitchen_status": "PREPARING",
+          "station": "پیتزا و فست‌فود"
+        },
+        {
+          "id": "oi-4",
+          "menu_item_id": 4,
+          "name": "Salad Vowl",
+          "seat_number": 1,
+          "quantity": 1,
+          "unit_price": 40,
+          "subtotal": 40,
+          "course": "COURSE_1",
+          "kitchen_status": "READY",
+          "station": "سالاد و پیش‌غذا"
+        }
+      ]
+    },
+    {
+      "id": "ORD-103",
+      "order_number": "01784910248102",
+      "table_id": 3,
+      "table_number": "03",
+      "source": "POS",
+      "status": "CONFIRMED",
+      "created_at": "۱۴:۵۰",
+      "customer_name": "Mahfuza Joha",
+      "customer_avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
+      "address": "Karang Teagha Hils",
+      "items": [
+        {
+          "id": "oi-5",
+          "menu_item_id": 3,
+          "name": "Sicilian Pizza.",
+          "seat_number": 1,
+          "quantity": 1,
+          "unit_price": 70,
+          "subtotal": 70,
+          "course": "COURSE_1",
+          "kitchen_status": "PREPARING",
+          "station": "پیتزا و فست‌فود"
+        }
+      ]
+    }
+  ],
+  "inventory": [
+    {
+      "id": 1,
+      "name": "پنیر موزارلا تازه ایتالیایی",
+      "category": "مواد اولیه",
+      "current_stock": 14.5,
+      "unit": "کیلوگرم",
+      "minimum_stock": 5,
+      "status": "HEALTHY"
+    },
+    {
+      "id": 2,
+      "name": "آرد پیتزا دو صفر",
+      "category": "مواد خشک",
+      "current_stock": 42,
+      "unit": "کیلوگرم",
+      "minimum_stock": 10,
+      "status": "HEALTHY"
+    },
+    {
+      "id": 3,
+      "name": "سس گوجه سنتی مارینارا",
+      "category": "سس و چاشنی",
+      "current_stock": 8.2,
+      "unit": "لیتر",
+      "minimum_stock": 3,
+      "status": "HEALTHY"
+    },
+    {
+      "id": 4,
+      "name": "فیله مرغ تازه گریل",
+      "category": "پروتئین",
+      "current_stock": 3,
+      "unit": "کیلوگرم",
+      "minimum_stock": 5,
+      "status": "LOW"
+    }
+  ],
+  "customerRequests": [
+    {
+      "id": "req-1790504271272",
+      "table_id": 1,
+      "table_number": "01",
+      "type": "CALL_WAITER",
+      "label": "درخواست گارسون مهمان میز 01",
+      "status": "PENDING",
+      "created_at": "02:47 PM",
+      "assigned_waiter": "فرهاد انوری"
+    },
+    {
+      "id": "req-1790504266792",
+      "table_id": 1,
+      "table_number": "01",
+      "type": "CALL_WAITER",
+      "label": "درخواست گارسون مهمان میز 01",
+      "status": "PENDING",
+      "created_at": "02:47 PM",
+      "assigned_waiter": "فرهاد انوری"
+    }
+  ],
+  "devices": [
+    {
+      "id": "dev-1790504190421",
+      "name": "دستگاه مهمان (میز 12)",
+      "type": "GUEST_MOBILE",
+      "ip_address": "192.168.10.37",
+      "assigned_to": "نشست مهمان میز 12",
+      "status": "ONLINE",
+      "last_active": "هم‌اکنون",
+      "connected_table_number": "12"
+    }
+  ],
+  "receipts": [
+    {
+      "id": "REC-1001",
+      "order_number": "01845723022573",
+      "table_number": "01",
+      "payment_method": "نقدی",
+      "discount": 0,
+      "grand_total": 120,
+      "timestamp": "2026-09-27T14:25:00.000Z"
+    }
+  ],
+  "announcements": [],
+  "activeBroadcast": null
+}

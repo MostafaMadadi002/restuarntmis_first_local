@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+}
+
+/* ==========================================================================
+   Print Styles: Print ONLY the designed QR Stand Card (Hide everything else)
+   ========================================================================== */
+@media print {
+  /* When printing card or any isolated element, hide #root completely */
+  body.is-printing-card #root,
+  body.printing-isolated #root {
+    display: none !important;
+  }
+
+  /* Reset document for clean paper output */
+  html,
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide all app chrome, navigation, sidebars, buttons, forms */
+  header,
+  nav,
+  aside,
+  footer,
+  button,
+  input,
+  select,
+  .no-print {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Standalone isolated print container outside #root */
+  #isolated-print-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: static !important;
+    margin: 20px auto !important;
+    width: 360px !important;
+    max-width: 90% !important;
+    border: 3px solid #064e3b !important;
+    border-radius: 20px !important;
+    padding: 24px !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    text-align: center !important;
+    visibility: visible !important;
+  }
+
+  /* Multi-table batch print grid layout */
+  #isolated-print-card[data-mode="grid"],
+  #isolated-print-card.isolated-print-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8mm !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+  }
+
+  #isolated-print-card[data-mode="grid"] .batch-card-item,
+  #isolated-print-card.isolated-print-grid .batch-card-item {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    border: 2px solid #064e3b !important;
+    border-radius: 16px !important;
+    padding: 14px !important;
+    background: #ffffff !important;
+    text-align: center !important;
+  }
+
+  #isolated-print-card * {
+    visibility: visible !important;
+  }
+
+  #isolated-print-card img {
+    display: block !important;
+    margin: 0 auto !important;
+    max-width: 220px !important;
+    height: auto !important;
+  }
+
+  /* In-page fallback print: if is-printing-card class is not active */
+  body:not(.is-printing-card) {
+    visibility: hidden !important;
+  }
+
+  body:not(.is-printing-card) .printable-stand-card,
+  body:not(.is-printing-card) .printable-stand-card * {
+    visibility: visible !important;
+  }
+
+  body:not(.is-printing-card) .printable-stand-card {
+    position: fixed !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 auto !important;
+    width: 360px !important;
+    max-width: 90% !important;
+    border: 3px solid #064e3b !important;
+    border-radius: 20px !important;
+    padding: 24px !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 99999999 !important;
+  }
+
+  body:not(.is-printing-card) .printable-stand-card img {
+    display: block !important;
+    margin: 0 auto !important;
+    max-width: 210px !important;
+    height: auto !important;
+  }
+
+  @page {
+    size: auto;
+    margin: 8mm;
+  }
+}
